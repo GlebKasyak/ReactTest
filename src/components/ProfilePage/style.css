@@ -1,0 +1,15 @@
+
+.profile {
+    text-align: center;
+    height: 50vh;
+}
+
+.profile h1 {
+    color: #ee3769;
+    text-transform: uppercase;
+}
+
+.thanks {
+    font-size: 30px;
+    color: rgba(0,0,0, .6);
+}

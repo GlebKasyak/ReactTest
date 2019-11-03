@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import { PrivateRoute } from "./components/PrivateRoute";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Navigation } from "./components/Navigation";
+import { PostPage } from "./components/PostPage";
+import { ProfilePage } from "./components/ProfilePage";
+import { MainPage } from "./components/MainPage";
+import { LoginPage } from "./components/LoginPage";
 
-export default App;
+import * as ROUTES from "./constants/routes";
+
+
+export const App = () => (
+
+    <Router>
+        <Navigation />
+
+        <Route exact path={ROUTES.MAIN_PAGE} component={MainPage} />
+        <Route path={ROUTES.POSTS_PAGE} component={PostPage} />
+        <Route path={ROUTES.LOGIN_PAGE} component={LoginPage} />
+        <PrivateRoute path={ROUTES.PROFILE_PAGE} component={ProfilePage}/>
+
+    </Router>
+);

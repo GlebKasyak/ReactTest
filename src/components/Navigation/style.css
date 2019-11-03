@@ -1,0 +1,33 @@
+
+.nav {
+    padding: 10px;
+    background: rgba(0,0,0, .6);
+    margin-bottom: 30px;
+}
+
+.nav-item .nav-link{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-item .nav-link:active,
+.nav-item .nav-link:focus,
+.nav-item .nav-link:hover {
+    background: black;
+}
+
+.user:nth-child(odd) {
+    background-color: rgba(0,0,0,.1);
+}
+
+.user:nth-child(even) {
+    margin: 5px 0;
+    background-color: rgba(0,0,0,.03);
+}
+
+.spinner-border {
+    color: rgba(0,0,0,.7);
+    background-color: white;
+}
